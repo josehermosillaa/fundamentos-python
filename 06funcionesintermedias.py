@@ -10,4 +10,18 @@ random.random() devuelve un número flotante aleatorio entre 0.00 y 1.00
 random.random() * 50 devuelve un número flotante aleatorio entre 0.00 y 50.99
 random.random() * 25 + 10 devuelve un número flotante aleatorio entre 10.00 y 35.99
 round(num) devuelve el valor entero redondeado de num'''
+import random
+def randint(min = 0, max = 100):
+    if min == 0:
+        num = round(max*(random.random()))
+        print(num)
+        return num
+    else:
+        num = round((max-min)*(random.random())+min)
+        print(num)
+        return num
+
+randint(max=3)
+randint(min = 97)
+randint(3,5)
 
