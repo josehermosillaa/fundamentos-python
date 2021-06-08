@@ -71,3 +71,5 @@ dojo = {
 #         print(f'{num} {key} ')
 
 # printInfo(dojo)
+for k in dojo:
+    print(k.upper())
