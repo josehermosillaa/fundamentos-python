@@ -71,5 +71,12 @@ dojo = {
 #         print(f'{num} {key} ')
 
 # printInfo(dojo)
-for k in dojo:
-    print(k.upper())
+def printInfo(some_dict):
+    for k in some_dict:
+        num = len(some_dict[k])
+        namekey = k.upper()
+        print(f'\n{num} {namekey}')
+        for i in range(0,len(some_dict[k])):
+            print(some_dict[k][i])
+
+printInfo(dojo)
