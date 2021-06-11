@@ -26,6 +26,11 @@ class Underscore:
         # return "HOLAfilter"
     def reject(self, iterable, callback):
         # tu código 
+        x = []
+        for i in iterable:
+            if callback(i):
+                x.append(i)
+        return x
         return "HOLAreject"
 # has creado una libreria con 4 métodos
 # se crea la instancia de la clse
@@ -34,6 +39,6 @@ evens = _.filter([1, 2, 3, 4, 5, 6], lambda x: x % 2 == 0)
 # debe retornar [2, 4, 6] después que termines de implementar el código de arriba
 
 # print(_.map([1,2,3], lambda x: x*2)) # debe retornar [2,4,6]
-print(_.find([1,2,3,4,5,6], lambda x: x>4)) # debe retornar el primer valor que es mayor que 4
+# print(_.find([1,2,3,4,5,6], lambda x: x>4)) # debe retornar el primer valor que es mayor que 4
 # print(_.filter([1,2,3,4,5,6], lambda x: x%2==0)) # debe retornar [2,4,6]
-# print(_.reject([1,2,3,4,5,6], lambda x: x%2!=0)) # debe retornar [1,3,5]
+print(_.reject([1,2,3,4,5,6], lambda x: x%2!=0)) # debe retornar [1,3,5]
